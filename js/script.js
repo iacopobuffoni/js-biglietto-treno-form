@@ -13,24 +13,24 @@ _Submit.addEventListener('click',
         console.log(_YearsOld.value)
         
         // Prezzo
-        let _Price = (0.21 * _Kilometers);
+        let _Price = (0.21 * _Kilometers.value);
 
-        if (_YearsOld < 18) {
+        if (_YearsOld.value == 'notadult') {
 
             let _Discount = ((_Price / 100) * 20);
             _Price = _Price - _Discount;
             console.log('Hai meno di 18 anni, il prezzo originale è decurtato del 20%: ' + _Price.toFixed(2));
 
-        } else if (_YearsOld >= 65) {
+        } else if (_YearsOld.value == 'over') {
 
-            let _Discount = ((_Price / 100) * 20);
+            let _Discount = ((_Price / 100) * 40);
             _Price = _Price - _Discount;
             console.log('Hai più di 65 anni, il prezzo originale è decurtato del 40%: ' + _Price.toFixed(2));
 
         } else {
 
             console.log('Il prezzo originale è: ' + _Price.toFixed(2));
-            
+
         }
         
     }
