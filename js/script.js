@@ -22,6 +22,7 @@ _Submit.addEventListener('click',
             console.log('Hai meno di 18 anni, il prezzo originale è decurtato del 20%: ' + _Price.toFixed(2));
             document.getElementById('price').innerHTML = _Price;
             document.getElementById('type').innerHTML = 'Biglietto Minorenni';
+            document.getElementById('cap').innerHTML = '54038';
             document.getElementById('nomecognome').innerHTML = _NomeCognome.value;
 
         } else if (_YearsOld.value == 'over') {
@@ -31,6 +32,7 @@ _Submit.addEventListener('click',
             console.log('Hai più di 65 anni, il prezzo originale è decurtato del 40%: ' + _Price.toFixed(2));
             document.getElementById('price').innerHTML = _Price;
             document.getElementById('type').innerHTML = 'Biglietto Over';
+            document.getElementById('cap').innerHTML = '54038';
             document.getElementById('nomecognome').innerHTML = _NomeCognome.value;
 
         } else {
@@ -38,6 +40,7 @@ _Submit.addEventListener('click',
             console.log('Il prezzo originale è: ' + _Price.toFixed(2));
             document.getElementById('price').innerHTML = _Price;
             document.getElementById('type').innerHTML = 'Biglietto Standard';
+            document.getElementById('cap').innerHTML = '54038';
             document.getElementById('nomecognome').innerHTML = _NomeCognome.value;
 
         }
