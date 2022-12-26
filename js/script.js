@@ -7,7 +7,7 @@ const _Submit = document.getElementById('create');
 _Submit.addEventListener('click',
 
     function() {
-        //document.getElementById('biglietto').style.display = "block";
+
         console.log(_NomeCognome.value);
         console.log(_Kilometers.value, typeof _Kilometers.value);
         console.log(_YearsOld.value);
@@ -22,6 +22,7 @@ _Submit.addEventListener('click',
             console.log('Hai meno di 18 anni, il prezzo originale è decurtato del 20%: ' + _Price.toFixed(2));
             document.getElementById('price').innerHTML = _Price;
             document.getElementById('type').innerHTML = 'Biglietto Minorenni';
+            document.getElementById('nomecognome').innerHTML = _NomeCognome.value;
 
         } else if (_YearsOld.value == 'over') {
 
@@ -30,12 +31,14 @@ _Submit.addEventListener('click',
             console.log('Hai più di 65 anni, il prezzo originale è decurtato del 40%: ' + _Price.toFixed(2));
             document.getElementById('price').innerHTML = _Price;
             document.getElementById('type').innerHTML = 'Biglietto Over';
+            document.getElementById('nomecognome').innerHTML = _NomeCognome.value;
 
         } else {
 
             console.log('Il prezzo originale è: ' + _Price.toFixed(2));
             document.getElementById('price').innerHTML = _Price;
             document.getElementById('type').innerHTML = 'Biglietto Standard';
+            document.getElementById('nomecognome').innerHTML = _NomeCognome.value;
 
         }
         
